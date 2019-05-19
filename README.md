@@ -51,9 +51,9 @@ class DdSpider(CrawlSpider):
 
 **然后启动scrapy，它会跑起来，并且可以看到已经拿到所有小说章节的URL了**
 
-![dingdian](F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/Typora/dingdian.JPG)
+![dingdian](dingdian.JPG)
 
-**![dingdian1](F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/Typora/dingdian1.JPG)**
+**![dingdian1](dingdian1.JPG)**
 
 **总共爬取了2674个，2672正常**
 
@@ -87,7 +87,7 @@ from ..items import DingdianItem
 
 **这时我们在运行一下scrapy，即可得到标题和正文输出了**
 
-![dingdian2](F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/Typora/dingdian2.JPG)
+![dingdian2](dingdian2.JPG)
 
 **好了，基本的数据如果可以爬取了，我们就可以在pipelines.py管道文件中进行保存了**
 
@@ -143,7 +143,7 @@ scrapy crawl dd
 
 不到四分钟就可以看到运行完成了
 
-![dingdian4](F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/Typora/dingdian4.JPG)
+![dingdian4](dingdian4.JPG)
 
 **然后我们查看一下数据库有没有数据**
 
@@ -153,7 +153,7 @@ use dingdian #使用dingdian数据库
 show collections #查看数据库下的所有集合
 ```
 
-![dingdian3](F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/F:/%E8%AE%B2%E4%B9%89%E7%BB%8F%E9%AA%8C/Typora/dingdian3.JPG)
+![dingdian3](dingdian3.JPG)
 
 **可以看到已经保存到mongo数据库了**
 
