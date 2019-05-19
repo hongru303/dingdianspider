@@ -141,7 +141,7 @@ cd dingdian
 scrapy crawl dd
 ```
 
-不到四分钟就可以看到运行完成了
+不到2分钟就可以看到运行完成了
 
 ![dingdian4](dingdian4.JPG)
 
