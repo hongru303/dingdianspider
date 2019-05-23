@@ -158,3 +158,18 @@ show collections #查看数据库下的所有集合
 **可以看到已经保存到mongo数据库了**
 
 **大功告成**
+
+**2019/5/23更新**
+```
+    start_urls = ['https://www.booktxt.net/xuanhuanxiaoshuo/']
+
+    rules = (
+        Rule(LinkExtractor(allow=r'.*\.html', restrict_xpaths='//div[@id="list"]/dl'), callback='parse_item', follow=False),
+        Rule(LinkExtractor(allow=r'net\/.*\/', restrict_xpaths='//div[@class="r"]/ul/li/span/a'), follow=True)
+    )
+ ```
+**把开始时的url改为网站的玄幻小说系列，然后再Rules里面多加一个规则就可以把所有的玄幻系列爬取下来了**
+**但是这样爬取还有个问题就是不能按小说名来保存**
+ **先把问题放这里过段时间再说**
+ ps：也可以进入全本小说那里把所有小说爬下来，网站没有反爬限制
+    
