@@ -161,6 +161,7 @@ show collections #查看数据库下的所有集合
 
 **2019/5/23更新**
 ```
+    #玄幻系列
     start_urls = ['https://www.booktxt.net/xuanhuanxiaoshuo/']
 
     rules = (
@@ -172,4 +173,14 @@ show collections #查看数据库下的所有集合
 **但是这样爬取还有个问题就是不能按小说名来保存**
  **先把问题放这里过段时间再说**
  ps：也可以进入全本小说那里把所有小说爬下来，网站没有反爬限制
+ ```
+    #全本系列
+    start_urls = ['https://www.booktxt.net/xiaoshuodaquan/']
+
+    rules = (
+        Rule(LinkExtractor(allow=r'.*\.html', restrict_xpaths='//div[@id="list"]/dl'), callback='parse_item', follow=False),
+        Rule(LinkExtractor(allow=r'net\/.*\/', restrict_xpaths='//div[@id=""main]'), follow=True)
+    )
+ ```
+**不过爬取全本代价有点大，慎爬**
     
